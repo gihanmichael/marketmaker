@@ -1,0 +1,48 @@
+{"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "prefix": {
+            "value": "mmgmw"
+        },
+        
+        "vNetId": {
+            "value": "/subscriptions/10295a8a-4790-490c-9783-c5330ca14b5f/resourceGroups/marketmaker/providers/Microsoft.Network/virtualNetworks/mmgmw-vnetv"
+        },
+        
+        "containerRegistryName": {
+            "value": "lmbddevacr"
+        },
+        
+        "containerRegistryUserName": {
+            "value": "lmbddevacr"
+        },
+        
+        "containerVersion": {
+            "value": "1.6.0"
+        },
+        
+        "cosmosAccountName": {
+        "value": "lmbd-dev-cosmos-account"
+        },
+        
+        "cosmosDbName": {
+            "value": "lmbd-dev-sqldb"
+        },
+        
+        "cosmosContainerName": {
+            "value": "lmbd-dev-state"
+        },
+        "containerRegistyrPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": ""
+                        },
+                        "secretName": "acrAdminPassword"
+            }
+        }
+    }
+
+}
